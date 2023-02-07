@@ -1,0 +1,609 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: black;
+	text-decoration: underline;
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 200ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+a:hover {
+	color: white;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #000000;
+	text-decoration: none;
+}
+
+body {
+    background: #CCCCCC;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 72px;
+    left: 0px;
+    background: #CCCCCC;
+    z-index: 10000;
+    top: 0px;
+    
+}
+
+.nav {
+    position: absolute;
+    width: 1280px;
+    height: 72px;
+    left: 320px;
+    top: 0px;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 489px;
+    position: absolute;
+    width: 1280px;
+    height: 51px;
+    left: 0px;
+    top: 11px;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+    width: 215px;
+    height: 49px;    
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 45px;
+    width: 576px;
+    height: 51px;
+    list-style-type: none;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+    width: 138px;
+    height: 49px;
+    text-decoration: none;
+  }
+
+  li a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 480px;
+    position: absolute;
+    width: 1280px;
+    height: 3005.5px;
+    left: 320px;
+    top: 400px;
+  }
+
+  .parallax {
+    width: 1280px;
+    height: 399px;
+    background: #CCCCCC
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 392px;
+    position: absolute;
+    width: 782px;
+    height: 56px;
+    left: 249px;
+    top: 200px;  
+  }
+  
+  .left {
+    width: 193px;
+    height: 56px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    
+  }
+
+  .right {
+    width: 197px;
+    height: 56px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+
+  .git {
+    width: 41px;
+    left: 781px;
+    top: 260px;
+    position: absolute;
+    height: 38px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+.javascript {
+    width: 159px;
+    left: 933px;
+    top: 315px;
+    position: absolute;
+    height: 38px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    color: rgba(0, 0, 0, 0.25);
+
+}
+
+.css {
+    width: 59px;
+    left: 834px;
+    top: 85px;
+    position: absolute;
+    height: 38px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.html {
+    width: 87px;
+    left: 972px;
+    top: 118px;
+    position: absolute;
+    height: 38px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.cjm {
+    width: 67px;
+    left: 434px;
+    top: 288px;
+    position: absolute;
+    height: 38px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.jtbd {
+    position: absolute;
+    width: 78px;
+    height: 38px;
+    left: 115px;
+    top: 241px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    color: rgba(0, 0, 0, 0.25);
+    
+}
+
+.atomic {
+    width: 102px;
+    left: 214px;
+    top: 334px;
+    position: absolute;
+    height: 38px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.photoshop {
+    width: 155px;
+    left: 346px;
+    top: 96px;
+    position: absolute;
+    height: 38px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.aftereffect {
+    width: 163px;
+    left: 115px;
+    top: 33px;
+    position: absolute;
+    height: 38px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.figma {
+    width: 89px;
+    left: 176px;
+    top: 126px;
+    position: absolute;
+    height: 38px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.expirience {
+    width: 1279px;
+    height: 641px;
+    
+}
+
+.expcontent {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 25px;
+    position: absolute;
+    width: 1101px;
+    height: 633px;
+    left: 0px;
+    top: 879px;
+}
+
+div a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+    color: black;
+    text-decoration: none;
+}
+
+.progress-bar {
+    position: absolute;
+    right: 0;
+	width: 4px;
+	background:  #CC603A;
+	border-radius: 0px;
+}
+
+.progress-bar:before {
+	height: 1%;
+}
+
+.explists {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 25px;
+    width: 1101px;
+    height: 633px;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 1098px;
+    height: 92px;
+}
+
+.edu-stroke {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 587px;
+    width: 1098px;
+    height: 84px;
+    
+}
+
+.edu-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 2px;
+    width: 342px;
+    height: 84px;
+    
+}
+
+.grade {
+    width: 342px;
+    height: 32px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.company {
+    width: 181px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-decoration-line: underline;
+    height: 24px;
+}
+
+.facultet {
+    width: 248px;
+    height: 24px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */ 
+}
+
+.job {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 1098px;
+    height: 66px;
+    
+}
+
+.job-stroke {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 587px;
+    width: 1094px;
+    height: 58px;
+}
+
+.job-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 2px;
+    width: 342px;
+    height: 58px;
+}
+
+.date {
+    width: 169px;
+    height: 24px;
+    font-family: Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px
+}
+
+
+.line {
+    width: 1098px;
+    height: 0.5px;
+    background: rgba(0, 0, 0, 0.034);
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0; 
+}
+
+  .works {
+    width: 1280px;
+    height: 1000px;  
+  }
+
+a:hover img{
+    opacity: 0.9;
+}
+
+  .img1 {
+    position: absolute;
+    width: 640px;
+    height: 500px;
+    left: 0px;
+    top: 2005.5px;
+  }
+
+  .img2 {
+    position: absolute;
+    width: 640px;
+    height: 500px;
+    left: 640px;
+    top: 2005.5px;
+    
+  }
+  .img3 {
+    position: absolute;
+    width: 640px;
+    height: 500px;
+    left: 0px;
+    top: 2505.5px;
+    
+  }
+  .img4 {
+    position: absolute;
+    width: 640px;
+    height: 500px;
+    left: 640px;
+    top: 2505.5px;
+    
+  }
+
+
+.contact {
+    position: absolute;
+    width: 100%;
+    height: 202px;
+    left: 0px;
+    top: 3663px;
+    background: #3C3C3C;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 254px;
+    position: absolute;
+    width: 1235px;
+    height: 32px;
+    left: 343px;
+    top: 93px;
+    
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+    width: 304px;
+    height: 32px;
+    color: #CCCCCC;
+}
+
+.telegram {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+    width: 182px;
+    height: 32px;
+}
+
+.behance {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+    width: 241px;
+    height: 32px;
+}
+
+  .email svg path, .behance a {
+    transition: all 0.3s;
+  }
+  
+  .email:hover svg path {
+    fill: #CCCCCC;
+  }
+  
+  .email:hover a {
+    color: #CCCCCC;
+  }
+
+  .telegram svg path, .behance a {
+    transition: all 0.3s;
+  }
+  
+  .telegram:hover svg path {
+    fill: #CCCCCC;
+  }
+  
+  .telegram:hover a {
+    color: #CCCCCC;
+  }
+  .behance svg path, .behance a {
+    transition: all 0.3s;
+  }
+  
+  .behance:hover svg path {
+    fill: #CCCCCC;
+  }
+  
+  .behance:hover a {
+    color: #CCCCCC;
+  }
