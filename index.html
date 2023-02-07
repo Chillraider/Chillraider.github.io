@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Myportfolio</title>
+</head>
+<body>
+    <a name="abt"></a>
+    <nav>
+        <div class="nav"> 
+            <div class="nav-content" >                               
+                <p class="name">Daniel Rizatdinov</p>
+                 <ul>
+                    <li><a href="#abt">About</a></li>
+                    <li><a href="#exp">Expirience</a></li>
+                    <li><a href="#work">Works</a></li>
+                    <li><a href="#cont">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <section class="parallax">
+            <div class="header">
+                <div class="layer left" data-speed="2">Designer</div>
+                <div class="layer right" data-speed="2">&lt/Coder&gt</div>
+            </div>
+            <div class="layer git" data-speed="7">Git</div>
+            <div class="layer javascript" data-speed="7">Java Script</div>
+            <div class="layer css" data-speed="7" >CSS</div>
+            <div class="layer html" data-speed="7">HTML</div>
+            <div class="layer cjm" data-speed="7">CJM</div>
+            <div class="layer jtbd" data-speed="7">JTBD</div>
+            <div class="layer atomic" data-speed="7">Atomic</div>
+            <div class="layer photoshop" data-speed="7">Photoshop</div>
+            <div class="layer aftereffect" data-speed="7">After Effect</div>
+            <div class="layer figma" data-speed="7">Figma</div>
+            <script>
+                const elements = document.querySelectorAll('.layer');
+          
+                function moveLayersDependsOnMouse(e) {
+                  const initialX = (window.innerWidth / 2) - e.pageX;
+                  const initialY = (window.innerHeight / 2) - e.pageY;
+          
+                  Array.from(elements).forEach(element => {
+                    const speed = element.getAttribute('data-speed');
+                    const positionX = initialX * speed / 100;
+                    const positionY = initialY * speed / 300;
+          
+                    element.style.transform = `translate(${positionX}px, ${positionY}px)`;
+                  });
+                }
+          
+                window.addEventListener('mousemove', moveLayersDependsOnMouse);
+              </script>
+        </section>
+        <section class="expirience">
+            <a name="exp"></a>
+            <div id="progressbar" class="progress-bar"></div>
+            <script>
+                const progressBar = document.getElementById("progressbar");
+                    progressBar.style.height = 1 + "%";
+
+                    const expSection = document.querySelector('.expirience');
+                    const expSectionTop = expSection.offsetTop;
+                    const expSectionBottom = expSectionTop + expSection.offsetHeight;
+
+                    window.onscroll = () => {
+                      const scroll = document.documentElement.scrollTop;
+                      if (scroll >= expSectionTop && scroll <= expSectionBottom) {
+                        const height = expSection.offsetHeight;
+                        let scrolled = ((scroll - expSectionTop) / height) * 22;
+                    
+                        if (scrolled <= 1) {
+                          progressBar.style.height = 1 + "%";
+                        } else {
+                          progressBar.style.height = scrolled + "%";
+                        }
+                      }
+                    }
+            </script>
+            <div class="expcontent">
+                <div class="explists">
+                    <div class="education">
+                        <div class="edu-stroke">
+                            <div class="edu-info">
+                                <div class="grade">Specialist</div>
+                                <div class="company"><a href="http://eng.unn.ru/">Lobachevsky University</a></div>
+                                <div class="facultet">Faculty of International Relations</div>
+                            </div>
+                            <div class="date">Sep 2010  — Apr 2013</div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="job">
+                        <div class="job-stroke">
+                            <div class="job-info">
+                                <div class="grade">Specialist of the support team</div>
+                                <div class="company"><a href="https://mgts.ru/">MGTS</a></div>
+                            </div>
+                            <div class="date">Nov 2014 —  Jul 2015</div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="job">
+                        <div class="job-stroke">
+                            <div class="job-info">
+                                <div class="grade">Specialist of the support team</div>
+                                <div class="company"><a href="https://www.datakrat.ru/">Datakrat</a></div>
+                            </div>
+                            <div class="date">Apr 2016 —  Sep 2016</div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="job">
+                        <div class="job-stroke">
+                            <div class="job-info">
+                                <div class="grade">Lead specialist</div>
+                                <div class="company"><a href="https://www.rosbank.ru/en/individuals/">Rosbank</a></div>
+                            </div>
+                            <div class="date">Nov 2016  — Aug 2017</div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="job">
+                        <div class="job-stroke">
+                            <div class="job-info">
+                                <div class="grade">Senior support manager</div>
+                                <div class="company"><a href="https://vk.company/en/">VK</a></div>
+                            </div>
+                            <div class="date">Aug 2017 — Aug 2018 </div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="job">
+                        <div class="job-stroke">
+                            <div class="job-info">
+                                <div class="grade">Lead of the support team </div>
+                                <div class="company"><a href="https://www.gazprom-neft.ru/">Gazpromneft</a></div>
+                            </div>
+                            <div class="date">Nov 2018 — Oct 2022 </div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="job">
+                        <div class="job-stroke">
+                            <div class="job-info">
+                                <div class="grade">Head of product</div>
+                                <div class="company"><a href="https://weinvest.capital/">WeInvest capital</a></div>
+                            </div>
+                            <div class="date">Oct 2022 — Present</div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="works">
+            <a name="work"></a>
+                <a href=""><img class="img1" src="https://i.yapx.ru/Vd6qq.png" alt="project1"></a>
+                <a href=""><img class="img2" src="https://i.yapx.ru/Vd6qv.png" alt="project2"></a>
+                <a href=""><img class="img3" src="https://i.yapx.ru/Vd6qr.png" alt="project3"></a>
+                <a href=""><img class="img4" src="https://i.yapx.ru/Vd66Y.png" alt="project4"></a>
+        </section>
+    </div>
+    <section class="contact">
+        <a name="cont"></a>
+        <div class="contacts">
+            <div class="email">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_153_112)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4578 8.73058C20.8058 7.15498 18.6011 6.29663 16.3201 6.3319C12.1459 6.3319 8.60081 9.14797 7.33679 12.94C6.66657 14.9271 6.66657 17.0789 7.33678 19.0661H7.34265C8.61254 22.8522 12.1518 25.6683 16.3259 25.6683C18.4806 25.6683 20.3305 25.1172 21.7641 24.1437V24.1398C23.4514 23.0228 24.6038 21.2649 24.9624 19.2778H16.3201V13.1165H31.4118C31.5999 14.1865 31.6881 15.28 31.6881 16.3676C31.6881 21.2341 29.9489 25.3484 26.9228 28.1351L26.926 28.1375C24.2745 30.5833 20.6353 32.0001 16.3201 32.0001C10.2704 32.0001 4.7382 28.5902 2.02205 23.1873C-0.247266 18.6663 -0.24726 13.3398 2.02207 8.81881C4.73822 3.41003 10.2704 0.000101659 16.3201 0.000101659C20.2943 -0.0469312 24.1334 1.44636 27.0259 4.16251L22.4578 8.73058Z" fill="black"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_153_112">
+                        <rect width="32" height="32" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                <a href="mailto:rizatdinou@gmail.com" target="_blank">rizatdinou@gmail.com</a>
+            </div>
+            <div class="telegram">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_153_115)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16ZM16.5734 11.8119C15.0171 12.4592 11.9068 13.7989 7.24252 15.8311C6.48511 16.1323 6.08834 16.427 6.05222 16.7151C5.99118 17.202 6.60095 17.3937 7.4313 17.6548C7.54425 17.6903 7.66127 17.7271 7.78125 17.7661C8.59818 18.0317 9.6971 18.3424 10.2684 18.3547C10.7866 18.3659 11.365 18.1523 12.0035 17.7138C16.3615 14.772 18.6112 13.2851 18.7524 13.253C18.8521 13.2304 18.9901 13.202 19.0837 13.2851C19.1772 13.3683 19.168 13.5258 19.1581 13.568C19.0977 13.8255 16.7042 16.0508 15.4655 17.2024C15.0793 17.5614 14.8054 17.816 14.7494 17.8742C14.624 18.0045 14.4962 18.1277 14.3733 18.2461C13.6144 18.9778 13.0452 19.5264 14.4048 20.4224C15.0582 20.8529 15.581 21.209 16.1026 21.5642C16.6722 21.9521 17.2404 22.339 17.9755 22.8209C18.1628 22.9437 18.3416 23.0712 18.5158 23.1954C19.1788 23.668 19.7743 24.0926 20.5101 24.0248C20.9377 23.9855 21.3793 23.5835 21.6036 22.3845C22.1336 19.5509 23.1755 13.4113 23.4163 10.8813C23.4374 10.6596 23.4109 10.376 23.3895 10.2514C23.3682 10.1269 23.3237 9.94948 23.1618 9.81813C22.9701 9.66258 22.6742 9.62978 22.5418 9.63211C21.94 9.64271 21.0167 9.96376 16.5734 11.8119Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_153_115">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <a href="https://t.me/Rizatdinou" target="_blank">@rizatdinou</a>
+            </div>
+            <div class="behance">
+                <a href="" target="_blank">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_153_118)">
+                        <rect width="32" height="32" fill="#3B3B3B"/>
+                        <path d="M29.6313 0H2.3625C1.05625 0 0 1.03125 0 2.30625V29.6875C0 30.9625 1.05625 32 2.3625 32H29.6313C30.9375 32 32 30.9625 32 29.6938V2.30625C32 1.03125 30.9375 0 29.6313 0ZM9.49375 27.2687H4.74375V11.9937H9.49375V27.2687ZM7.11875 9.9125C5.59375 9.9125 4.3625 8.68125 4.3625 7.1625C4.3625 5.64375 5.59375 4.4125 7.11875 4.4125C8.6375 4.4125 9.86875 5.64375 9.86875 7.1625C9.86875 8.675 8.6375 9.9125 7.11875 9.9125ZM27.2687 27.2687H22.525V19.8438C22.525 18.075 22.4937 15.7937 20.0562 15.7937C17.5875 15.7937 17.2125 17.725 17.2125 19.7188V27.2687H12.475V11.9937H17.025V14.0813H17.0875C17.7188 12.8813 19.2688 11.6125 21.575 11.6125C26.3813 11.6125 27.2687 14.775 27.2687 18.8875V27.2687Z" fill="black"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_153_118">
+                        <rect width="32" height="32" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/rizatdinou/" target="_blank">Daniel Rizatdinov</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
